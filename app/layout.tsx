@@ -10,13 +10,11 @@ import Navbar from "@/components/navigation/navbar";
 const inter = Inter({
   variable: "--font-inter",
   weight: ["100", "200", "300", "400", "500", "700", "800", "900"],
-  preload: false,
 });
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
   weight: ["300", "400", "500", "700"],
-  preload: false,
 });
 
 export const metadata: Metadata = {
