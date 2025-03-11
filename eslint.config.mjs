@@ -31,7 +31,7 @@ export default [
       "react/require-default-props": "off",
       "react/no-unescaped-entities": "off",
       "import/extensions": [
-        "error",
+        "warning",
         "ignorePackages",
         {
           ts: "never",

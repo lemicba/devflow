@@ -3,6 +3,10 @@ import { Inter, Space_Grotesk } from "next/font/google";
 
 import "./globals.css";
 
+import { ThemeProvider } from "next-themes";
+
+import Navbar from "@/components/navigation/navbar";
+
 const inter = Inter({
   variable: "--font-inter",
   weight: ["100", "200", "300", "400", "500", "700", "800", "900"],
@@ -29,7 +33,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}>{children}</body>
+      <body className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <Navbar />
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
